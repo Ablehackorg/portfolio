@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Hojiakbarov Azamat</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./portfolio.jpg" alt="Profile photo" id="profile-photo">
+        <h2>Hojiakbarov Azamat</h2>
+        <p><b>E-mail:</b> hojiakbarovazamat@gmail.com</p>
+        <p><b>GitHub:</b> <a href="https://github.com/Ablehackorg" target="_blank">github.com/Ablehackorg</a></p>
+        <p><b>Telegram:</b> <a href="https://t.me/Python_Able" target="_blank">@Python_Able</a></p>
+    </header>
+
+    <section class="fade-in">
+        <h2>EXPERIENCE</h2>
+        <div class="experience">
+            <h3>Independent & Startup Developer | Freelance & Personal Projects</h3>
+            <p><i>2021 – Present | Full-stack Python Developer & ML Engineer/Data Science/Data Analyst</i></p>
+            <p>
+                Worked with startups and personal projects, focusing on backend development, machine learning, and automation.  
+                Delivered end-to-end systems from data collection and processing to deployment and user interaction.
+            </p>
+            <ul>
+                <li>Developed admin dashboards using Flask and REST APIs for internal startup tools.</li>
+                <li>Built machine learning models for image classification and cryptocurrency trend prediction (up to 90% accuracy).</li>
+                <li>Designed and launched multiple Telegram bots for food delivery, ecology, and service management using Aiogram.</li>
+                <li>Built data scraping tools for platforms like Amazon.com using Selenium and BeautifulSoup.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>PROJECTS</h2>
+        <div class="experience">
+            <ul>
+                <li>🏫 <b>EduCenter — Educational Platform</b> | Django, PostgreSQL</li>
+                <li>🍔 <b>Telegram Food Delivery Bot</b> | Python, Aiogram, PostgreSQL</li>
+                <li>🌱 <b>EcoForumBot — Ecology Project Platform</b> | Python, Aiogram, SQLite/PostgreSQL</li>
+                <li>📦 <b>Amazon.com Product Scraper</b> | Python, Selenium, BeautifulSoup</li>
+                <li>🤖 <b>Machine Learning Projects</b>  
+                    <ul>
+                        <li>Cryptocurrency Predictor – CNN (~90% accuracy)</li>
+                        <li>Diabetes Prediction – Medical classification model</li>
+                        <li>Housing Price Estimator – Regression model (scikit-learn, TensorFlow, PyTorch, Keras)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>EDUCATION</h2>
+        <div class="education">
+            <ul>
+                <li>BABM (2021-2024)</li>
+                <li>Inha University in Tashkent (2023)</li>
+                <li>Mohirdev (2025)</li>
+                <li>Ustudy (2025)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>VOLUNTARY & COMMUNITY ACTIVITIES</h2>
+        <div class="education">
+            <ul>
+                <li>Participated in multiple hackathons to build and pitch software under pressure</li>
+                <li>Contributed to open-source projects on GitHub</li>
+                <li>Created and published free tools for Telegram communities</li>
+                <li>Built public datasets and bots supporting local communities</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>LANGUAGES & TECHNOLOGIES</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Languages</th>
+                    <th>Frameworks & Tools</th>
+                    <th>Concepts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><b>Web:</b> Django, Flask, FastAPI, Aiogram</li>
+                            <li><b>Databases:</b> PostgreSQL, SQLite</li>
+                            <li><b>ML/DL:</b> scikit-learn, TensorFlow, PyTorch, Keras, fast.ai</li>
+                            <li><b>Data Tools:</b> Pandas, NumPy, Seaborn, Matplotlib, SQLAlchemy</li>
+                            <li><b>Scraping:</b> Selenium, BeautifulSoup</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Data Processing: cleaning, merging, reshaping</li>
+                            <li>ML Techniques: Regression, Classification, Clustering</li>
+                            <li>Learning Types: Supervised, Unsupervised, Semi-Supervised</li>
+                            <li>Deep Learning: CNNs, RNNs</li>
+                            <li>Data Visualization & Reporting</li>
+                            <li>API Development, Admin Dashboards</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <h3><a href="./contact.html">Contact me</a></h3>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll(".fade-in");
+
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
